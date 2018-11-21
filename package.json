@@ -1,0 +1,27 @@
+{
+  "name": "persona-backend",
+  "version": "0.0.0",
+  "description": "Backend Nodejs du projet Persona",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valid13/persona-backend.git"
+  },
+  "author": "Walid BOUCHAREB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valid13/persona-backend/issues"
+  },
+  "homepage": "https://github.com/valid13/persona-backend#readme",
+  "devDependencies": {
+    "eslint": "5.9.0",
+    "eslint-config-google": "0.11.0"
+  },
+  "dependencies": {
+    "express": "4.16.4"
+  }
+}
