@@ -4,7 +4,7 @@
   "description": "Backend Nodejs du projet Persona",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node config/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/valid13/persona-backend#readme",
   "devDependencies": {
-    "eslint": "5.9.0",
     "eslint-config-google": "0.11.0"
   },
   "dependencies": {
-    "express": "4.16.4"
+    "express": "4.16.4",
+    "node": "11.2.0"
   }
 }
