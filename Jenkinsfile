@@ -1,21 +1,20 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:8-jessie' 
-            args '-p 3000:3000' 
-        }
-    }
     stages {
-        stage('Build') { 
+        stage('Build') {
+            agent {
+                docker {
+                    image 'node:8-jessie' 
+                    args '-p 3000:3000' 
+                }
+            }
             steps {
                 sh 'npm install' 
             }
         }
-        stage('Run'){
+        stage('Deploy'){
             steps {
                 script {
-                    docker.build
-                    customImage.run
+                    docker.build + ":$BUILD_NUMBER"
                 }
             }
         }
