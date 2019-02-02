@@ -14,8 +14,8 @@ pipeline {
         stage('Run'){
             steps {
                 script {
-                    def customImage = docker.build()
-                    customImage.run()
+                    docker.build
+                    customImage.run
                 }
             }
         }
