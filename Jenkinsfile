@@ -16,6 +16,7 @@ pipeline {
             agent any
             steps {
                 sh "ls -l"
+                sh "echo $PWD"
                 script {
                     node {
                         docker.build('persona-backend')
