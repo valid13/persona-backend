@@ -13,9 +13,13 @@ pipeline {
             }
         }
         stage('Deploy'){
-            agent { dockerfile: true}
+            agent { dockerfile: {
+                filename 'Dockerfile'
+            }
+            
+            }
             steps {
-                
+
             }
         }
     }
