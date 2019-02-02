@@ -15,6 +15,7 @@ pipeline {
         stage('Deploy'){
             agent any
             steps {
+                sh "ls -l"
                 script {
                     node {
                         docker.build('persona-backend')
