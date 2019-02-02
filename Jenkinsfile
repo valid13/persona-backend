@@ -12,9 +12,11 @@ pipeline {
             }
         }
         stage('Run'){
-            script {
-                def customImage = docker.build()
-                customImage.run()
+            steps {
+                script {
+                    def customImage = docker.build()
+                    customImage.run()
+                }
             }
         }
     }
