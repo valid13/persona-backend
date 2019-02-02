@@ -13,12 +13,9 @@ pipeline {
             }
         }
         stage('Deploy'){
+            agent { dockerfile: true}
             steps {
-                script {
-                    node {
-                        docker.build
-                    }
-                }
+                
             }
         }
     }
