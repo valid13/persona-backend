@@ -1,4 +1,5 @@
 pipeline {
+    agent any
     stages {
         stage('Build') {
             agent {
@@ -14,7 +15,9 @@ pipeline {
         stage('Deploy'){
             steps {
                 script {
-                    docker.build + ":$BUILD_NUMBER"
+                    node {
+                        docker.build
+                    }
                 }
             }
         }
