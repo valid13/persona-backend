@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Build') {
             agent {
@@ -13,13 +13,13 @@ pipeline {
             }
         }
         stage('Deploy'){
-            agent { dockerfile: {
-                filename 'Dockerfile'
-            }
-            
-            }
+            agent any
             steps {
-
+                script {
+                    node {
+                        docker.build('persona-backend')
+                    }
+                }
             }
         }
     }
