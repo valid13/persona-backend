@@ -20,7 +20,8 @@ pipeline {
                 script {
                     node {
                         checkout scm
-                        docker.build('persona-backend:1.0')
+                        var image = docker.build('persona-backend:1.0')
+                        image.run('-p 8080:90')
                     }
                 }
             }
