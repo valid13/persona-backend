@@ -19,6 +19,7 @@ pipeline {
                 sh "echo $PWD"
                 script {
                     node {
+                        checkout scm
                         docker.build('persona-backend:1.0')
                     }
                 }
