@@ -1,4 +1,4 @@
-FROM node:8-jessie
+FROM node:8
 
 WORKDIR /usr/src/app
 ADD . /usr/src/app
