@@ -1,10 +1,10 @@
 FROM node:8
 
-WORKDIR /usr/src/app
-ADD . /usr/src/app
+# WORKDIR /usr/src/app
+# ADD . /usr/src/app
 
-RUN npm install
+# RUN npm install
 
-EXPOSE 3000
+# EXPOSE 3000
 
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
