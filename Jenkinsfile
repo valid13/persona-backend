@@ -19,7 +19,7 @@ pipeline {
                 sh "echo $PWD"
                 script {
                     node {
-                        docker.build('persona-backend')
+                        docker.build('persona-backend:1.0')
                     }
                 }
             }
