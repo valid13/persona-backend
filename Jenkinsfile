@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy'){
             agent any
             steps {
-                sh "ls -l"
+                sh "ls -l /var/jenkins_home/workspace/persona-backend@2"
                 sh "echo $PWD"
                 script {
                     node {
