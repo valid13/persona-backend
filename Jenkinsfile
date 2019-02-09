@@ -20,8 +20,10 @@ pipeline {
                 script {
                     node {
                         checkout scm
+                        def name = "persona-backend"
                         def image = docker.build('persona-backend:1.0')
-                        image.run('-p 90:90', '--name persona-backend')
+                        sh 'docker stop persona-backend && docker rm '+ name
+                        image.run('-p 90:90', '--name ' + name)
                     }
                 }
             }
